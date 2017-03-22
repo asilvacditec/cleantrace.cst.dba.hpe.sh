@@ -1,0 +1,34 @@
+# HPE: CST - CRITICAL SERVICES TEAM
+# Server: lbtvpaxbd05
+# File: /etc/logrotate.d/oracle.cst.dba.hpe.logrotate 
+# Author: Aparecido Souza da Silva
+# Date: 22/03/2017
+# Descripcion: Oracle Database logrotate
+#              Poner este archivo en la ruta "/etc/logrotate.d/"
+#
+# IMPORTANTE: Cualquier modificacion en esto archivo debe ser comunicado
+#             al equipo CST.
+#
+# Change log:
+#
+
+# Listener logs
+/oracle/diag/tnslsnr/lbtvpaxbd05/listener/trace/listener.log
+/oracle/diag/tnslsnr/lbtvpaxbd05/listener_prcn/trace/listener_prcn.log
+/oracle/diag/tnslsnr/lbtvpaxbd05/listener_paxopb/trace/listener_paxopb.log
+/oracle/product/10.2.0/paxopa/network/log/listener_paxopa.log
+
+# Alert Logs
+/oracle/diag/asm/+asm/+ASM/trace/alert_+ASM.log
+/oracle/diag/rdbms/paxopb/paxopb/trace/alert_paxopb.log
+/oracle/diag/rdbms/prcn/prcn/trace/alert_prcn.log
+/oracle/admin/paxopa/bdump/alert_paxopa.log
+
+{
+daily
+rotate 30
+copytruncate
+missingok
+notifempyt
+compress
+}
