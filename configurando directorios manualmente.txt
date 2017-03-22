@@ -1,0 +1,70 @@
+
+cat ../log/cleantrace_20170317095243.aud | awk '{print $9}' | cut -f 1-7 -d"/" | uniq | sort
+
+
+export DIRECTORIES_TO_SEARCH="$hpdba/log/ "
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/frp1/adump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/frp1/bdump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/frp1/udump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pap1/adump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pap1/bdump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pap1/udump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr08/adump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr08/bdump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr08/udump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr13/adump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr13/bdump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr13/udump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr15/adump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr15/bdump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr15/udump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr27/adump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr27/bdump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr27/udump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr28/adump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr28/bdump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr28/udump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr29/adump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr29/bdump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr29/udump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr30/adump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr30/bdump"
+export DIRECTORIES_TO_SEARCH="$DIRECTORIES_TO_SEARCH /oracle/app/oracle/admin/pr30/udump"
+
+
+ echo $DIRECTORIES_TO_SEARCH
+/log/ /oracle/app/oracle/admin/frp1/adump /oracle/app/oracle/admin/frp1/bdump /oracle/app/oracle/admin/frp1/udump /oracle/app/oracle/admin/pap1/adump /oracle/app/oracle/admin/pap1/bdump /oracle/app/oracle/admin/pap1/udump /oracle/app/oracle/admin/pr08/adump /oracle/app/oracle/admin/pr08/bdump /oracle/app/oracle/admin/pr08/udump /oracle/app/oracle/admin/pr13/adump /oracle/app/oracle/admin/pr13/bdump /oracle/app/oracle/admin/pr13/udump /oracle/app/oracle/admin/pr15/adump /oracle/app/oracle/admin/pr15/bdump /oracle/app/oracle/admin/pr15/udump /oracle/app/oracle/admin/pr27/adump /oracle/app/oracle/admin/pr27/bdump /oracle/app/oracle/admin/pr27/udump /oracle/app/oracle/admin/pr28/adump /oracle/app/oracle/admin/pr28/bdump /oracle/app/oracle/admin/pr28/udump /oracle/app/oracle/admin/pr29/adump /oracle/app/oracle/admin/pr29/bdump /oracle/app/oracle/admin/pr29/udump /oracle/app/oracle/admin/pr30/adump /oracle/app/oracle/admin/pr30/bdump /oracle/app/oracle/admin/pr30/udump
+
+
+export DIRECTORIES_TO_SEARCH="$hpdba/log/ \
+/oracle/app/oracle/admin/frp1/adump \
+/oracle/app/oracle/admin/frp1/bdump \
+/oracle/app/oracle/admin/frp1/udump \
+/oracle/app/oracle/admin/pap1/adump \
+/oracle/app/oracle/admin/pap1/bdump \
+/oracle/app/oracle/admin/pap1/udump \
+/oracle/app/oracle/admin/pr08/adump \
+/oracle/app/oracle/admin/pr08/bdump \
+/oracle/app/oracle/admin/pr08/udump \
+/oracle/app/oracle/admin/pr13/adump \
+/oracle/app/oracle/admin/pr13/bdump \
+/oracle/app/oracle/admin/pr13/udump \
+/oracle/app/oracle/admin/pr15/adump \
+/oracle/app/oracle/admin/pr15/bdump \
+/oracle/app/oracle/admin/pr15/udump \
+/oracle/app/oracle/admin/pr27/adump \
+/oracle/app/oracle/admin/pr27/bdump \
+/oracle/app/oracle/admin/pr27/udump \
+/oracle/app/oracle/admin/pr28/adump \
+/oracle/app/oracle/admin/pr28/bdump \
+/oracle/app/oracle/admin/pr28/udump \
+/oracle/app/oracle/admin/pr29/adump \
+/oracle/app/oracle/admin/pr29/bdump \
+/oracle/app/oracle/admin/pr29/udump \
+/oracle/app/oracle/admin/pr30/adump \
+/oracle/app/oracle/admin/pr30/bdump \
+/oracle/app/oracle/admin/pr30/udump "
+
+ echo $DIRECTORIES_TO_SEARCH
+
+ 
