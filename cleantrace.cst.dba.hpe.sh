@@ -50,7 +50,8 @@
 #            - Las variables SHORTP y LONGP reciben el valor automaticamente segun el valor pasado a $RETENCION
 #            - Agregado seguridad para que no se ejecute como usuario root
 # 20/03/2017 - Agregado chequeo si el comando ADRCI existe
-#
+# 
+# 29/03/2017 - Fix bug relacionado al proceso que revisa si hay otro proceso en ejecucion
 
 
 # VARIABLES MODIFICABLES
@@ -87,10 +88,10 @@ if [ "$(id -u)" == "0" ]; then
 fi
 
 # Revisa si el proceso encontrase en ejecucion
-export PROCESS=`ps -efww | grep $USER | grep -w "cleantrace.cst.dba.hpe.sh" | grep -v grep | grep -v $$ | wc -l`
-if [ ${PROCESS} -gt 0 ]; then
+export PROCESS=`ps -efww | grep $USER | grep -w "cleantrace.cst.dba.hpe.sh" | grep -v grep | wc -l`
+if [ ${PROCESS} -gt 3 ]; then
   echo "El proceso ya esta en ejecucion"
-  ps -efww | grep -w "cleantrace.cst.dba.hpe.sh" | grep -v grep | grep -v $$
+  ps -efww | grep $USER | grep -w "cleantrace.cst.dba.hpe.sh" | grep -v grep 
   exit 1;
 fi
 
